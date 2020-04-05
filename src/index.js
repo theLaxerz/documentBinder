@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import SideNav from './sidenav/sidenav';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <SideNav />
   </React.StrictMode>,
   document.getElementById('root')
 );
