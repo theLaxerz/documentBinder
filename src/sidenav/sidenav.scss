@@ -1,20 +1,24 @@
 .Side-Nav {
     display: flex;
     margin-top: auto;
+    padding: 1px;
     flex-direction: column;
     -ms-flex-align: inherit;
-    width: 10%;
-    border-right: solid;
-    box-shadow: 5px 3px;
-    color: rgba(202, 32, 32, 0.70)
+    width: 20%;
+    padding: 10px;
+    //border-right: solid;
+    box-shadow: 1.75px 1px;
+    border-radius: 2px;
+    //color: rgba(199, 116, 116, 0.986);
 }
 
 .Button {
-    border-radius: 5px;
+    border-radius: 3px;
     border: solid;
-    width: auto;
+    width: 100%;
     height: auto;
-    border-width: 2px;
-    border-color: rgba(209, 117, 117, 0.7);
-    color: rgba(204, 161, 147, 0.6)0.6)
+    background-color: rgba(160, 55, 55, 0.767);
+    color: rgba(228, 209, 192, 0.952);
+    padding: 5px;
+    margin: 5px;
 }

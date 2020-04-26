@@ -9,7 +9,7 @@
 }
 
 .App-logo {
-  height: 25vmin;
+  height: 15vmin;
   flex-direction: row;
   align-self: flex-start;
   pointer-events: none;
@@ -30,12 +30,16 @@
   display: flex;
   font-size: calc(10px + 2vmin);
   color: rgba(150, 10, 10, 0.692);
-  height: 25vmin;
+  height: 15vmin;
   width: 100%;
   order: 1;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  border-bottom: solid;
+  border-width: 2px, 1px;
+  border-radius: 1px;
+  border-color: rgba(185, 72, 72, 0.966);
 }
 
 @keyframes App-logo-spin {
