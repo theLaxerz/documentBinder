@@ -5,7 +5,7 @@ function sideNav() {
     return ( 
         <div className = "Side-Nav" >
           <a href='https://thelaxerz.us'>
-            <button className = "Button" variant="contained">theLaxerz</button>
+            <button className = "Button">theLaxerz</button>
           </a>      
         </div>
     );
