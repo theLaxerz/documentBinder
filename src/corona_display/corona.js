@@ -16,9 +16,13 @@ componentDidMount() {
 }
 
 
-const Corona = ({
-    corona
-}) => {
+class Corona extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+    render() {
     return (  
     <div>
       <center>
@@ -36,6 +40,6 @@ const Corona = ({
           </div>
         ))} 
     </div>
-)};
-
-export default Corona
+)
+}
+}

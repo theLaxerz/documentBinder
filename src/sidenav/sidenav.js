@@ -36,10 +36,7 @@ function sideNav() {
         </div>
         {/* Attempt to put CoronaVirus Data in the same JS file as NAV Bar */}
         <div className="Content">
-                render() {
-                  return (< Corona corona = {this.state.corona} />
-                  )
-                }
+            ReactDom.render(Corona, document.getElementById('root'));
         </div>
       </div>  
     );
