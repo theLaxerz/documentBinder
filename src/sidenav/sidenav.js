@@ -3,32 +3,27 @@ import './sidenav.scss';
 
 function sideNav() {
     return ( 
-        <div className = "Main">
+        <div className = "Main">    
           <div className = "Side-Nav">
-          <a href='https://thelaxerz.us'>
-            <button className = "Button">theLaxerz</button>
+          <a href='https://google.com'>
+            <button className = "Button">Google</button>
           </a>  
           </div>    
           <div className = "Side-Nav">
-          <a href='https://thelaxerz.us'>
-            <button className = "Button">theLaxerz</button>
+          <a href='https://twitter.com'>
+            <button className = "Button">Twitter</button>
           </a>  
           </div>    
           <div className = "Side-Nav">
-          <a href='https://thelaxerz.us'>
-            <button className = "Button">theLaxerz</button>
+          <a href='https://linkedin.com'>
+            <button className = "Button">LinedIn</button>
           </a>  
           </div>    
-          <div className = "Side-Nav">
-          <a href='https://thelaxerz.us'>
+          <div className = "About Me">
+          <a href='https://thelaxerz.info'>
             <button className = "Button">theLaxerz</button>
           </a>  
-          </div>    
-          <div className = "Side-Nav">
-          <a href='https://thelaxerz.us'>
-            <button className = "Button">theLaxerz</button>
-          </a>  
-          </div>    
+          </div>              
         </div>
         
     );
