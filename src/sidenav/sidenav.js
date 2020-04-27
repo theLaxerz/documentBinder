@@ -13,7 +13,7 @@ function sideNav() {
         <div className = "Main">
           {/* Sidenav Structure, Main Component with Buttons */}
           <div className = "Side-Nav">
-          <a href='https://material-ui.org'>
+          <a href='https://material-ui.com'>
             <button className = "Button">Material-UI</button>
           </a>  
           </div>    

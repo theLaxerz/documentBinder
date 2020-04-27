@@ -1,11 +1,12 @@
-//  For Mobile 
+//  For Mobile with a max width of 540 iphone 4 the
+// last remaining small operable model is 320 px
 @media screen and (max-width: 540px) {
     .view {
         width: 400px;
     }
 }
 
-// For Tablets 
+// For Tablets obviously between 540 px and 780 px
 @media screen and (min-width: 540px) and (max-width: 780px) {
     .view {
         width: 600px;
@@ -15,8 +16,9 @@
 // Main Page
 
 .SuperDIV {
-    padding: 0;
-    margin: 0;
+    flex-basis: auto;
+    flex: auto;
+    padding-top: 5vh;
     list-style: none;
     -ms-box-orient: horizontal;
     display: -webkit-box;
@@ -28,7 +30,7 @@
 }
 
 .Main {
-    flex: 1 1 20em;
+    flex: 1 1 20vw;
     //display: flex;
     //flex-direction: column;
     background: gray;
@@ -54,7 +56,7 @@
 }
 
 .Content {
-    flex: 1 1 20em;
+    flex: 1 1 80vw;
     display: flex;
     flex-flow: row nowrap;
     flex-direction: row;
