@@ -1,11 +1,21 @@
+.SuperDIV {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 0;
+  background-color: rgba(222,222,222,.34);
+}
+
 .Main {
     display:flex;
     border: solid;
     border-color: rgba(199,100,100,.2);
-    background-color: rgba(222,222,222,.34);
     flex-direction: column;
-    margin-top: 5vmin;
+    margin: auto;
     padding-top: 10px;
+    width: auto;
 }
 
 .Side-Nav {
@@ -19,6 +29,18 @@
     //box-shadow: 1.75px 1px;
     //border-radius: 2px;
     //color: rgba(199, 116, 116, 0.986);
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    -ms-flex-align: inherit;
+    width: 70%;
+    padding: 5%;
+    background-color: white;
+    border: solid;
+    border-color: maroon;
+    border-radius: 3px;
 }
 
 .Button {

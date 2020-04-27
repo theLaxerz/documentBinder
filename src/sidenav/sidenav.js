@@ -1,31 +1,43 @@
+// Call to React and to Sidenav's CSS
 import React from 'react';
-import './sidenav.scss';
+import './sidenv.scss';
 
 function sideNav() {
-    return ( 
-        <div className = "Main">    
+    return (
+      // Divided in Main DIV 100% of Screen with SideNav DIV 20% Of Screen
+      // Hoping to get Content to be 70% with padding around it to give it a splash
+      // of color around the Content.
+      // Added SuperDIV as an attempt to split out the main div without throwing
+      // REACT TSX Error
+      <div className = "SuperDIV">  
+        <div className = "Main">
+          {/* Sidenav Structure, Main Component with Buttons */}
           <div className = "Side-Nav">
-          <a href='https://google.com'>
-            <button className = "Button">Google</button>
+          <a href='https://material-ui.org'>
+            <button className = "Button">Material-UI</button>
           </a>  
           </div>    
           <div className = "Side-Nav">
-          <a href='https://twitter.com'>
-            <button className = "Button">Twitter</button>
+          <a href='https://reactjs.com'>
+            <button className = "Button">ReactJS</button>
           </a>  
           </div>    
           <div className = "Side-Nav">
-          <a href='https://linkedin.com'>
-            <button className = "Button">LinedIn</button>
+          <a href='https://www.tensorflow.org/'>
+            <button className = "Button">TensorFlow</button>
           </a>  
           </div>    
-          <div className = "About Me">
+          <div className = "Side-Nav">
           <a href='https://thelaxerz.info'>
             <button className = "Button">theLaxerz</button>
           </a>  
           </div>              
         </div>
-        
+        {/* Attempt to put Content in the same JS file as NAV Bar */}
+        <div className="Content">
+          <p>Test</p>
+        </div>
+      </div>  
     );
 }
 export default sideNav
