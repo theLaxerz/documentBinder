@@ -1,6 +1,8 @@
 // Call to React and to Sidenav's CSS
 import React from 'react';
 import './sidenv.scss';
+import CoronaList from '../coronadata/corona_api';
+import Users from '../api/corona/corona';
 
 function sideNav() {
     return (
@@ -25,8 +27,13 @@ function sideNav() {
           <div className = "Side-Nav">
           <a href='https://www.tensorflow.org/'>
             <button className = "Button">TensorFlow</button>
-          </a>  
+          </a>
           </div>    
+          <div className = "Side-Nav">
+          <a href='https://www.npmjs.com/package/react-axios'>
+            <button className = "Button">NPM (Axios, React-Axios)</button>
+          </a>  
+          </div>                   
           <div className = "Side-Nav">
           <a href='https://thelaxerz.info'>
             <button className = "Button">theLaxerz</button>
@@ -35,7 +42,8 @@ function sideNav() {
         </div>
         {/* Attempt to put Content in the same JS file as NAV Bar */}
         <div className="Content">
-          <p>Test</p>
+          <CoronaList />
+          <Users />
         </div>
       </div>  
     );
