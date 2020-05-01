@@ -1,7 +1,7 @@
 // Call to React and to Sidenav's CSS
 import React from 'react';
 import './sidenv.scss';
-import CoronaList from '../coronadata/corona_api';
+// import CoronaList from '../coronadata/corona_api';
 import Users from '../api/corona/corona';
 
 function sideNav() {
@@ -42,7 +42,6 @@ function sideNav() {
         </div>
         {/* Attempt to put Content in the same JS file as NAV Bar */}
         <div className="Content">
-          <CoronaList />
           <Users />
         </div>
       </div>  

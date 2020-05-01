@@ -1,5 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment } from 'react';
 import axios from 'axios';
+
+
 
 export default class users extends Component {
     constructor(props) {
@@ -14,6 +16,19 @@ export default class users extends Component {
             .then(res => {
                 const data = res.data
                 console.log(data)
+                const users = data.map(u =>
+                  <div>
+                      {u.state},
+                      {u.deaths},
+                      {u.positive},
+                      {u.negative},
+                      {u.currentlyHospitalized}
+                  </div>
+                )
+
+                this.setState({
+                  users
+                })
 
             })
             .catch((error) => {
@@ -27,7 +42,20 @@ export default class users extends Component {
     render() {
 
         return (
-            <div></div>
+            <table> 
+            <thead>{users.state}</thead>
+            <tbody>
+                <Fragment>
+                    <tr>
+                        <td>{users.positive}</td>
+                        <td>{users.negative}</td>
+                        <td>{users.currentlyHospitalized}</td>
+                        <td>{users.deaths} </td>
+                    </tr>
+                </Fragment>
+            </tbody>
+          </table>
+
         )
     }
 }
