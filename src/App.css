@@ -40,7 +40,7 @@
 
 .App-header {
   flex-direction: row;
-  background-color: rgb(200, 220, 200, .5);
+  background-color: rgb(255, 117, 4);
   display: flex;
   font-size: calc(10px + 2vmin);
   color: rgba(150, 10, 10, 0.692);
@@ -51,16 +51,15 @@
   align-items: center;
   align-content: center;
   border-bottom: solid;
-  border-width: 2px, 1px;
-  border-radius: 1px;
-  border-color: rgba(185, 72, 72, 0.966);
+  border-width: 3px, 3px, 3px;
+  border-radius: 2px;
+  border-color: rgba(146, 90, 44, 0.945);
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }

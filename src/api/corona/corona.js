@@ -7,6 +7,16 @@ export default class users extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            // Place all JSON Response in here 
+            // this.setState({ imageURL: response.data.message });
+            /*  
+  render() {
+    const { imageURL } = this.state;
+    return (
+      <img src={imageURL} />
+    );
+  }
+  */
             Users: []
         };
     }
