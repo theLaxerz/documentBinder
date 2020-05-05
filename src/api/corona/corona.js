@@ -52,18 +52,20 @@ export default class users extends Component {
     render() {
 
         return (
-            <table> 
-            <thead>{users.state}</thead>
+            <table>
+             <Fragment>
+            <thead>{this.state}</thead>
             <tbody>
-                <Fragment>
+               
                     <tr>
-                        <td>{users.positive}</td>
-                        <td>{users.negative}</td>
-                        <td>{users.currentlyHospitalized}</td>
-                        <td>{users.deaths} </td>
+                        <td>{this.positive}</td>
+                        <td>{this.negative}</td>
+                        <td>{this.currentlyHospitalized}</td>
+                        <td>{this.deaths} </td>
                     </tr>
-                </Fragment>
+                
             </tbody>
+            </Fragment>
           </table>
 
         )
