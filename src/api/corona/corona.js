@@ -1,25 +1,26 @@
-import React, {Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
 
-
+// let Users[] 
 export default class users extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // Place all JSON Response in here 
-            // this.setState({ imageURL: response.data.message });
-            /*  
-  render() {
-    const { imageURL } = this.state;
-    return (
-      <img src={imageURL} />
-    );
-  }
-  */
+            //             // Place all JSON Response in here 
+            //             // this.setState({ imageURL: response.data.message });
+            //             /*  
+            //   render() {
+            //     const { imageURL } = this.state;
+            //     return (
+            //       <img src={imageURL} />
+            //     );
+            //   }
+            //   */
             Users: []
         };
     }
+
     getUsersData() {
         axios
             .get(`https://covidtracking.com/api/states`, {})
@@ -27,17 +28,13 @@ export default class users extends Component {
                 const data = res.data
                 console.log(data)
                 const users = data.map(u =>
-                  <div>
-                      {u.state},
-                      {u.deaths},
-                      {u.positive},
-                      {u.negative},
-                      {u.currentlyHospitalized}
-                  </div>
+                    <
+                    div > { u.state }, { u.deaths }, { u.positive }, { u.negative }, { u.currentlyHospitalized } <
+                    /div>
                 )
 
                 this.setState({
-                  users
+                    users
                 })
 
             })
@@ -46,27 +43,32 @@ export default class users extends Component {
             })
 
     }
-    componentDidMount(){
+    componentDidMount() {
         this.getUsersData()
     }
     render() {
 
-        return (
-            <table>
-             <Fragment>
-            <thead>{this.state}</thead>
-            <tbody>
-               
-                    <tr>
-                        <td>{this.positive}</td>
-                        <td>{this.negative}</td>
-                        <td>{this.currentlyHospitalized}</td>
-                        <td>{this.deaths} </td>
-                    </tr>
-                
-            </tbody>
-            </Fragment>
-          </table>
+        return ( <
+            table >
+            <
+            Fragment >
+            <
+            thead > { this.state } < /thead> <
+            tbody >
+
+            <
+            tr >
+            <
+            td > { this.positive } < /td> <
+            td > { this.negative } < /td> <
+            td > { this.currentlyHospitalized } < /td> <
+            td > { this.deaths } < /td> < /
+            tr >
+
+            <
+            /tbody> < /
+            Fragment > <
+            /table>
 
         )
     }
