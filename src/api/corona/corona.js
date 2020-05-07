@@ -45,10 +45,13 @@ export default class PersonList extends React.Component {
 
 
 
-
-            <ul >
+            <table>
+                <th>Positive</th>
+            
+            <tr>
                 {this.state.persons.map(person => <li>{person.positive}</li>)}
-            </ul>
+            </tr>
+            </table>
         )
     }
 }
