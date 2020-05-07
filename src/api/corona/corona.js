@@ -1,75 +1,54 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import axios from 'axios';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
 
-// let Users[] 
-export default class users extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            //             // Place all JSON Response in here 
-            //             // this.setState({ imageURL: response.data.message });
-            //             /*  
-            //   render() {
-            //     const { imageURL } = this.state;
-            //     return (
-            //       <img src={imageURL} />
-            //     );
-            //   }
-            //   */
-            Users: []
-        };
+const StyledTableCell = withStyles((theme) => ({
+    head: {
+        backgroundColor: theme.palette.common.black,
+        color: theme.palette.common.white,
+    },
+    body: {
+        fontSize: 14,
+    },
+}))(TableCell);
+
+const StyledTableRow = withStyles((theme) => ({
+    root: {
+        '&:nth-of-type(odd)': {
+            backgroundColor: theme.palette.background.default,
+        },
+    },
+}))(TableRow);
+export default class PersonList extends React.Component {
+    state = {
+        persons: []
     }
 
-    getUsersData() {
-        axios
-            .get(`https://covidtracking.com/api/states`, {})
-            .then(res => {
-                const data = res.data
-                console.log(data)
-                const users = data.map(u =>
-                    <
-                    div > { u.state }, { u.deaths }, { u.positive }, { u.negative }, { u.currentlyHospitalized } <
-                    /div>
-                )
-
-                this.setState({
-                    users
-                })
-
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-
-    }
     componentDidMount() {
-        this.getUsersData()
+        axios.get(`https://covidtracking.com/api/states`, {})
+            .then(res => {
+                const persons = res.data;
+                this.setState({ persons });
+            })
     }
+
     render() {
+        return (
 
-        return ( <
-            table >
-            <
-            Fragment >
-            <
-            thead > { this.state } < /thead> <
-            tbody >
 
-            <
-            tr >
-            <
-            td > { this.positive } < /td> <
-            td > { this.negative } < /td> <
-            td > { this.currentlyHospitalized } < /td> <
-            td > { this.deaths } < /td> < /
-            tr >
 
-            <
-            /tbody> < /
-            Fragment > <
-            /table>
 
+            <ul >
+                {this.state.persons.map(person => <li>{person.positive}</li>)}
+            </ul>
         )
     }
 }
