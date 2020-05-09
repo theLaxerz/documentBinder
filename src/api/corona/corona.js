@@ -47,11 +47,11 @@ export default class PersonList extends React.Component {
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
-                        <TableCell>State</TableCell>
-                        <TableCell>Positive</TableCell>
-                        <TableCell>Negative</TableCell>
-                        <TableCell>Currently Hospitalized</TableCell>
-                        <TableCell>Deaths</TableCell>
+                        <TableCell component="th" scope="row"><b>State</b></TableCell>
+                        <TableCell align="center">Positive</TableCell>
+                        <TableCell align="center">Negative</TableCell>
+                        <TableCell align="center">Currently Hospitalized</TableCell>
+                        <TableCell align="center">Deaths</TableCell>
                     </TableHead>
                     {this.state.persons.map(corona =>
                         <TableBody>
