@@ -23,7 +23,7 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
     root: {
         '&:nth-of-type(odd)': {
-            backgroundColor: theme.palette.background.default,
+            backgroundColor: theme.palette.common.gray,
         },
     },
 }))(TableRow);
@@ -44,14 +44,28 @@ export default class PersonList extends React.Component {
         return (
 
 
-
-            <table>
-                <th>Positive</th>
-            
-            <tr>
-                {this.state.persons.map(person => <li>{person.positive}</li>)}
-            </tr>
-            </table>
+            <TableContainer component={Paper}>
+                <Table>
+                    <TableHead>
+                        <TableCell>State</TableCell>
+                        <TableCell>Positive</TableCell>
+                        <TableCell>Negative</TableCell>
+                        <TableCell>Currently Hospitalized</TableCell>
+                        <TableCell>Deaths</TableCell>
+                    </TableHead>
+                    {this.state.persons.map(corona =>
+                        <TableBody>
+                            <StyledTableRow key={corona.state}>
+                                <StyledTableCell component="th" scope="row"><b>{corona.state}</b></StyledTableCell>
+                                <StyledTableCell align="center">{corona.positive}</StyledTableCell>
+                                <StyledTableCell align="center">{corona.negative}</StyledTableCell>
+                                <StyledTableCell align="center">{corona.hospitalizedCurrently}</StyledTableCell>
+                                <StyledTableCell align="center">{corona.death}</StyledTableCell>
+                            </StyledTableRow>
+                        </TableBody>
+                    )}
+                </Table>
+            </TableContainer>
         )
     }
 }
